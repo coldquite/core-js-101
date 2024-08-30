@@ -241,7 +241,8 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-  return (Number.isFinite(value)) ? Number(value) : def;
+  // eslint-disable-next-line no-restricted-globals
+  return (isFinite(value)) ? Number(value) : def;
 }
 
 module.exports = {
